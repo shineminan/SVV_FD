@@ -55,7 +55,7 @@ import matplotlib.pyplot as plt
 '''
 
 # Read data from .mat
-test_data = scipy.io.loadmat('test_data.mat')['flightdata'][0][0]
+test_data = scipy.io.loadmat('referencedata.mat')['flightdata'][0][0]
 def mat_data(i, item=0):
     entry = test_data[i][0][0]
     if item==0:
@@ -64,4 +64,7 @@ def mat_data(i, item=0):
         return entry[item][0][0][0]
     else:
         return 'FuckYou!'
+
+
+print(mat_data(3))
 
